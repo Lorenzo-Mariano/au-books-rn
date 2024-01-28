@@ -5,7 +5,7 @@ import {
 	ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
@@ -53,10 +53,103 @@ function RootLayoutNav() {
 
 	return (
 		<ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-			<Stack>
-				<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-				<Stack.Screen name="modal" options={{ presentation: "modal" }} />
-			</Stack>
+			<Drawer>
+				<Drawer.Screen
+					name="Home"
+					options={{
+						drawerLabel: "College",
+						headerTitle: "College",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Services"
+					options={{
+						drawerLabel: "Services",
+						headerTitle: "Services",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Uniform"
+					options={{
+						drawerLabel: "Uniform",
+						headerTitle: "Uniform",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Map"
+					options={{
+						drawerLabel: "Map",
+						headerTitle: "Map",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Scholarship"
+					options={{
+						drawerLabel: "Scholarship",
+						headerTitle: "Scholarship",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Event"
+					options={{
+						drawerLabel: "Event",
+						headerTitle: "Event",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="StudentManual"
+					options={{
+						drawerLabel: "Student Manual",
+						headerTitle: "Student Manual",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Faq"
+					options={{
+						drawerLabel: "FAQ",
+						headerTitle: "FAQ",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="About"
+					options={{
+						drawerLabel: "About",
+						headerTitle: "About",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="PhinmaEducation"
+					options={{
+						drawerLabel: "PHINMA Education",
+						headerTitle: "PHINMA Education",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Developers"
+					options={{
+						drawerLabel: "Developers",
+						headerTitle: "Developers",
+					}}
+				></Drawer.Screen>
+
+				<Drawer.Screen
+					name="Contact"
+					options={{
+						drawerLabel: "Contact",
+						headerTitle: "Contact",
+					}}
+				></Drawer.Screen>
+			</Drawer>
 		</ThemeProvider>
 	);
 }
