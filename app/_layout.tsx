@@ -23,7 +23,7 @@ export {
 
 export const unstable_settings = {
 	// Ensure that reloading on `/modal` keeps a back button present.
-	initialRouteName: "Home",
+	initialRouteName: "index",
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -59,10 +59,16 @@ function RootLayoutNav() {
 	return (
 		<ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
 			<GestureHandlerRootView style={{ flex: 1 }}>
-				{/* <Drawer drawerContent={CustomDrawerContent}> */}
-				<Drawer>
+				<Drawer
+					drawerContent={CustomDrawerContent}
+					screenOptions={{
+						drawerActiveBackgroundColor: "#7396ff",
+						drawerActiveTintColor: "#fff",
+						drawerLabelStyle: { marginLeft: -15 },
+					}}
+				>
 					<Drawer.Screen
-						name="Home"
+						name="index"
 						options={{
 							drawerLabel: "College",
 							headerTitle: "College",
