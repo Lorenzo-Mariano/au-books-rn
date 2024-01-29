@@ -62,10 +62,12 @@ function RootLayoutNav() {
 				<Drawer
 					drawerContent={CustomDrawerContent}
 					screenOptions={{
-						drawerActiveBackgroundColor: "#7396ff",
+						drawerActiveBackgroundColor: "#a1b8ff",
 						drawerActiveTintColor: "#fff",
 						drawerLabelStyle: { marginLeft: -15 },
+						headerTintColor: colorScheme === "dark" ? "#bababa" : "#000",
 					}}
+					backBehavior="history"
 				>
 					<Drawer.Screen
 						name="index"
