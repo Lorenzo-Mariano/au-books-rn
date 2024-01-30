@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function Services() {
 	return (
-		<View style={styles.page}>
+		<View style={styles.mainView}>
 			<Image
 				source={{
 					uri: "https://reactnative.dev/img/tiny_logo.png",
@@ -14,7 +14,11 @@ export default function Services() {
 }
 
 const styles = StyleSheet.create({
-	page: {
-		padding: "10%",
+	mainView: {
+		padding: "5%",
+	},
+
+	bigText: {
+		fontSize: 24,
 	},
 });

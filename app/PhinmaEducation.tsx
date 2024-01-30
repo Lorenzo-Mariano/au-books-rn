@@ -9,4 +9,12 @@ export default function PhinmaEducation() {
 	);
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	mainView: {
+		padding: "5%",
+	},
+
+	bigText: {
+		fontSize: 24,
+	},
+});

@@ -8,4 +8,12 @@ export default function Scholarship() {
 	);
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+	mainView: {
+		padding: "5%",
+	},
+
+	bigText: {
+		fontSize: 24,
+	},
+});

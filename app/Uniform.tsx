@@ -73,4 +73,8 @@ const styles = StyleSheet.create({
 		width: "100%",
 		borderRadius: 15,
 	},
+
+	shadow: {
+		shadowColor: "#bababa",
+	},
 });
