@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, useColorScheme } from "react-native";
 
 export default function Services() {
+	const colorScheme = useColorScheme();
+	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 	return (
 		<View style={styles.mainView}>
 			<Image

@@ -1,9 +1,9 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-import { useColorScheme } from "react-native";
+import { Image, StyleSheet, Text, View, useColorScheme } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function College() {
 	const colorScheme = useColorScheme();
+	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 
 	return (
 		<ScrollView
@@ -17,9 +17,9 @@ export default function College() {
 			<Text
 				style={[
 					styles.bigText,
-					styles.marginBottom,
+					styles.headline,
 					{
-						color: colorScheme === "dark" ? "#bababa" : "#000",
+						color: fontColor,
 					},
 				]}
 			>
@@ -95,8 +95,12 @@ const styles = StyleSheet.create({
 		fontSize: 24,
 	},
 
-	marginBottom: {
-		marginBottom: 40,
+	headline: {
+		marginBottom: 30,
+		fontWeight: "800",
+		paddingBottom: 10,
+		borderBottomColor: "#a1b8ff",
+		borderBottomWidth: 2,
 	},
 
 	img: {

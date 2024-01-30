@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View, useColorScheme } from "react-native";
 
 export default function PhinmaEducation() {
+	const colorScheme = useColorScheme();
+	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 	return (
 		<View>
 			<Text>PhinmaEducation</Text>

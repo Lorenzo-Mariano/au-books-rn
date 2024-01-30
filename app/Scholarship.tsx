@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, useColorScheme } from "react-native";
 
 export default function Scholarship() {
+	const colorScheme = useColorScheme();
+	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 	return (
 		<View>
 			<Text>Scholarship</Text>
