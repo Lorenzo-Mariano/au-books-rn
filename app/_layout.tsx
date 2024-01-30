@@ -47,6 +47,7 @@ export default function RootLayout() {
 	}, [loaded]);
 
 	if (!loaded) {
+		console.log("error loading fonts");
 		return null;
 	}
 

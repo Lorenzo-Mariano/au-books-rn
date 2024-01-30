@@ -8,7 +8,7 @@ import { Image, StyleSheet } from "react-native";
 export default function CustomDrawerContent(props: any) {
 	return (
 		<DrawerContentScrollView {...props}>
-			<View style={styles.imgWrapper}>
+			<View style={[styles.imgWrapper, styles.blueBottom]}>
 				<Image
 					alt="au-logo"
 					style={styles.img}
@@ -38,5 +38,11 @@ const styles = StyleSheet.create({
 
 		marginTop: 20,
 		marginBottom: 20,
+	},
+
+	blueBottom: {
+		borderBottomColor: "#a1b8ff",
+		borderStyle: "solid",
+		borderBottomWidth: 1,
 	},
 });

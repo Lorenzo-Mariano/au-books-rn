@@ -1,9 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
+import { useColorScheme } from "react-native";
 
-export default function Home() {
+export default function College() {
+	const colorScheme = useColorScheme();
+
 	return (
 		<View>
-			<Text>Home</Text>
+			<Text
+				style={[
+					{
+						color: colorScheme === "dark" ? "#bababa" : "#000",
+					},
+				]}
+			>
+				College
+			</Text>
 		</View>
 	);
 }
