@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, useColorScheme } from "react-native";
+import { Image, StyleSheet, Text, View, useColorScheme } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function Scholarship() {
@@ -12,6 +12,11 @@ export default function Scholarship() {
 			</Text>
 
 			<View style={styles.scholarships}>
+				<Image
+					style={[styles.scholarshipItem, styles.img]}
+					source={require("../assets/images/scholarship/scholarship.jpg")}
+				/>
+
 				<View style={styles.scholarshipItem}>
 					<Text style={[styles.bigText, { color: fontColor }]}>
 						PHINMA Scholarship Program
@@ -120,5 +125,12 @@ const styles = StyleSheet.create({
 		flex: 1,
 		flexDirection: "column",
 		gap: 6,
+	},
+
+	img: {
+		aspectRatio: 750 / 421,
+		height: undefined,
+		width: "100%",
+		borderRadius: 15,
 	},
 });
