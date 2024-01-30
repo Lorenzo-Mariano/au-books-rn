@@ -21,11 +21,11 @@ export default function Developers() {
 			<View style={{ flex: 1, gap: 20 }}>
 				<View style={styles.devItem}>
 					<Image
-						style={[styles.img, { aspectRatio: 1, alignSelf: "flex-start" }]}
+						style={styles.img}
 						source={require("../assets/images/developers/lorenzo.jpg")}
-					></Image>
-					<View>
-						<Text style={[styles.bigText, { color: fontColor }]}>
+					/>
+					<View style={{ flex: 1 }}>
+						<Text style={[styles.bigText, { color: fontColor, flexShrink: 1 }]}>
 							Lorenzo C. Mariano
 						</Text>
 						<Text style={{ color: fontColor }}>BSIT-2 South 3</Text>
@@ -34,18 +34,15 @@ export default function Developers() {
 				</View>
 
 				<View style={styles.devItem}>
-					<View>
-						<Text style={[styles.bigText, { color: fontColor }]}>
-							Faizal Jhonray
-						</Text>
-						<Text style={[styles.bigText, { color: fontColor }]}>
-							B. Peralta
+					<View style={{ flex: 1 }}>
+						<Text style={[styles.bigText, { color: fontColor, flexShrink: 1 }]}>
+							Faizal Jhonray B. Peralta
 						</Text>
 						<Text style={{ color: fontColor }}>BSIT-2 South 3</Text>
 						<Text style={{ color: fontColor }}>UI/UX</Text>
 					</View>
 					<Image
-						style={[styles.img, { aspectRatio: 1, alignSelf: "flex-end" }]}
+						style={styles.img}
 						source={require("../assets/images/developers/faizal.jpg")}
 					/>
 				</View>
@@ -79,12 +76,13 @@ const styles = StyleSheet.create({
 		height: undefined,
 		width: "40%",
 		borderRadius: 15,
+		aspectRatio: 1,
 	},
 
 	devItem: {
 		flex: 1,
 		flexDirection: "row",
 		alignItems: "center",
-		justifyContent: "space-between",
+		gap: 20,
 	},
 });
