@@ -11,12 +11,6 @@ export default function Services() {
 				{ backgroundColor: colorScheme === "dark" ? "#1a1a1a" : "#fff" },
 			]}
 		>
-			{/* <View>
-				<Image
-					style={{ width: "100%", height: undefined, aspectRatio: 755 / 8131 }}
-					source={require("../assets/images/services/all services.jpg")}
-				></Image>
-			</View> */}
 			<Text
 				style={[
 					{
@@ -28,13 +22,13 @@ export default function Services() {
 					styles.headline,
 				]}
 			>
-				Information Tecnology Services Department (ITSD)
+				Information Technology Services Department (ITSD)
 			</Text>
 
 			<Image
 				style={styles.img}
 				source={require("../assets/images/services/courses.jpg")}
-			></Image>
+			/>
 
 			<Text style={[styles.biggerText, { marginBottom: 20, color: fontColor }]}>
 				Courses
