@@ -11,6 +11,12 @@ export default function Services() {
 				{ backgroundColor: colorScheme === "dark" ? "#1a1a1a" : "#fff" },
 			]}
 		>
+			{/* <View>
+				<Image
+					style={{ width: "100%", height: undefined, aspectRatio: 755 / 8131 }}
+					source={require("../assets/images/services/all services.jpg")}
+				></Image>
+			</View> */}
 			<Text
 				style={[
 					{
