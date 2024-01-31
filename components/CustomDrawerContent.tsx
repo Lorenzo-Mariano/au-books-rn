@@ -14,7 +14,7 @@ export default function CustomDrawerContent(props: any) {
 				<Image
 					alt="au-logo"
 					style={styles.img}
-					source={require("../assets/images/au logo trans.png")}
+					source={require("../assets/images/icon.png")}
 				/>
 			</View>
 			<View
@@ -41,10 +41,8 @@ const styles = StyleSheet.create({
 		height: undefined,
 		width: "50%",
 		aspectRatio:
-			Image.resolveAssetSource(require("../assets/images/au logo trans.png"))
-				.width /
-			Image.resolveAssetSource(require("../assets/images/au logo trans.png"))
-				.height,
+			Image.resolveAssetSource(require("../assets/images/icon.png")).width /
+			Image.resolveAssetSource(require("../assets/images/icon.png")).height,
 	},
 
 	blueBottom: {

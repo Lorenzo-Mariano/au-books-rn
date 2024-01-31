@@ -8,8 +8,8 @@ export default function Uniform() {
 	return (
 		<ScrollView
 			style={[
-				{ backgroundColor: colorScheme === "dark" ? "#1a1a1a" : "#fff" },
 				styles.mainView,
+				{ backgroundColor: colorScheme === "dark" ? "#1a1a1a" : "#fff" },
 			]}
 		>
 			<Text
