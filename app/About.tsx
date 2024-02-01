@@ -3,9 +3,11 @@ import React from "react";
 
 export default function About() {
 	const colorScheme = useColorScheme();
+	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
+
 	return (
-		<View style={styles.mainView}>
+		<View style={[styles.mainView, { backgroundColor: viewBgColor }]}>
 			<Text style={[styles.biggerText, styles.headline, { color: fontColor }]}>
 				Stay up to date
 			</Text>

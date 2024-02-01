@@ -3,21 +3,11 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default function FAQ() {
 	const colorScheme = useColorScheme();
+	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 
 	return (
-		<ScrollView
-			style={[
-				styles.mainView,
-				{ backgroundColor: colorScheme === "dark" ? "#1a1a1a" : "#fff" },
-			]}
-		>
-			{/* <View>
-				<Image
-					style={{ width: "100%", height: undefined, aspectRatio: 755 / 8131 }}
-					source={require("../assets/images/services/all services.jpg")}
-				></Image>
-			</View> */}
+		<ScrollView style={[styles.mainView, { backgroundColor: viewBgColor }]}>
 			<Text
 				style={[
 					{

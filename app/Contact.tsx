@@ -1,10 +1,11 @@
 import { Image, StyleSheet, Text, View, useColorScheme } from "react-native";
 export default function Contact() {
 	const colorScheme = useColorScheme();
+	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 
 	return (
-		<View style={styles.mainView}>
+		<View style={[styles.mainView, { backgroundColor: viewBgColor }]}>
 			<Text style={[styles.bigText, styles.headline, { color: fontColor }]}>
 				Contact Us
 			</Text>
@@ -34,6 +35,7 @@ export default function Contact() {
 const styles = StyleSheet.create({
 	mainView: {
 		padding: "5%",
+		height: "100%",
 	},
 
 	headline: {

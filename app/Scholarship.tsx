@@ -3,10 +3,11 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default function Scholarship() {
 	const colorScheme = useColorScheme();
+	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 
 	return (
-		<ScrollView style={styles.mainView}>
+		<ScrollView style={[styles.mainView, { backgroundColor: viewBgColor }]}>
 			<Text style={[styles.biggerText, styles.headline, { color: fontColor }]}>
 				Save your money with our available scholarships:
 			</Text>

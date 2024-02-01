@@ -3,6 +3,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default function Developers() {
 	const colorScheme = useColorScheme();
+	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 
 	return (
@@ -11,7 +12,7 @@ export default function Developers() {
 				styles.mainView,
 				{
 					flex: 1,
-					backgroundColor: colorScheme === "dark" ? "#1a1a1a" : "#fff",
+					backgroundColor: viewBgColor,
 				},
 			]}
 		>
