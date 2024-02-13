@@ -5,6 +5,7 @@ export default function Developers() {
 	const colorScheme = useColorScheme();
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
+	const borderBottom = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
 
 	return (
 		<ScrollView
@@ -16,7 +17,13 @@ export default function Developers() {
 				},
 			]}
 		>
-			<Text style={[styles.biggerText, styles.headline, { color: fontColor }]}>
+			<Text
+				style={[
+					styles.biggerText,
+					styles.headline,
+					{ color: fontColor, borderBottomColor: borderBottom },
+				]}
+			>
 				Meet the developers:
 			</Text>
 			<View style={{ flex: 1, gap: 20 }}>
@@ -61,7 +68,6 @@ const styles = StyleSheet.create({
 		marginBottom: 30,
 		fontWeight: "800",
 		paddingBottom: 10,
-		borderBottomColor: "#a1b8ff",
 		borderBottomWidth: 2,
 	},
 

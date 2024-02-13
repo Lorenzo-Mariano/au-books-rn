@@ -1,23 +1,40 @@
 import { Image, StyleSheet, Text, View, useColorScheme } from "react-native";
-import React from "react";
 
 export default function About() {
 	const colorScheme = useColorScheme();
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
+	const borderBottom = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 
 	return (
 		<View style={[styles.mainView, { backgroundColor: viewBgColor }]}>
-			<Text style={[styles.biggerText, styles.headline, { color: fontColor }]}>
+			<Text
+				style={[
+					styles.biggerText,
+					styles.headline,
+					{ color: fontColor, borderBottomColor: borderBottom },
+				]}
+			>
 				Stay up to date
 			</Text>
-			<Image
-				style={styles.img}
-				source={require("../assets/images/about/books.jpg")}
-			/>
+			<View
+				style={{
+					marginBottom: 40,
+					alignItems: "center",
+				}}
+			>
+				<Image
+					style={styles.img}
+					source={require("../assets/images/circle-icon.png")}
+				/>
+			</View>
+			<Text style={[styles.bigText, { color: fontColor }]}>
+				App Name: AU Book Borrowing System
+			</Text>
 			<Text style={{ fontSize: 16, color: fontColor }}>
-				This app is for keeping track of books borrowed from the library. Don't
-				miss it the next time your favorite books become available again!
+				Description: This app is for keeping track of books borrowed from the
+				library. Don't miss it the next time your favorite books become
+				available again!
 			</Text>
 		</View>
 	);
@@ -35,7 +52,6 @@ const styles = StyleSheet.create({
 		marginBottom: 30,
 		fontWeight: "800",
 		paddingBottom: 10,
-		borderBottomColor: "#a1b8ff",
 		borderBottomWidth: 2,
 	},
 
@@ -49,8 +65,8 @@ const styles = StyleSheet.create({
 
 	img: {
 		height: undefined,
-		width: "100%",
-		aspectRatio: 1000 / 667,
+		width: "50%",
+		aspectRatio: 1,
 		borderRadius: 15,
 	},
 });

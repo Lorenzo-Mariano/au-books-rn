@@ -5,10 +5,17 @@ export default function PhinmaEducation() {
 	const colorScheme = useColorScheme();
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
+	const borderBottom = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
 
 	return (
 		<ScrollView style={[styles.mainView, { backgroundColor: viewBgColor }]}>
-			<Text style={[styles.biggerText, styles.headline, { color: fontColor }]}>
+			<Text
+				style={[
+					styles.biggerText,
+					styles.headline,
+					{ color: fontColor, borderBottomColor: borderBottom },
+				]}
+			>
 				Know more about us - PHINMA Education
 			</Text>
 
@@ -87,7 +94,6 @@ const styles = StyleSheet.create({
 		marginBottom: 30,
 		fontWeight: "800",
 		paddingBottom: 10,
-		borderBottomColor: "#a1b8ff",
 		borderBottomWidth: 2,
 	},
 

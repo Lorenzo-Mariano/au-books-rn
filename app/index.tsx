@@ -1,88 +1,64 @@
-import { Image, StyleSheet, Text, View, useColorScheme } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
+import {
+	Pressable,
+	StyleSheet,
+	Text,
+	View,
+	useColorScheme,
+} from "react-native";
 
 export default function College() {
 	const colorScheme = useColorScheme();
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
-	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
+	const dialogBgColor = colorScheme === "dark" ? "#2b2b2b" : "#fff";
+	const fontColor = colorScheme === "dark" ? "#fff" : "#000";
+	const borderBottom = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
 
 	return (
-		<ScrollView style={[styles.mainView, { backgroundColor: viewBgColor }]}>
-			<Text
-				style={[
-					styles.bigText,
-					styles.headline,
-					{
-						color: fontColor,
-					},
-				]}
-			>
-				Meet the faculty of the College of Information Technology and
-				Engineering!
-			</Text>
-			<View style={{ flex: 1, gap: 20, paddingBottom: 40 }}>
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/evelyn juliano.jpg")}
-				/>
+		<View style={[styles.mainView, { backgroundColor: viewBgColor }]}>
+			<View style={[styles.dialog, { backgroundColor: dialogBgColor }]}>
+				<Text style={[styles.headline, styles.bigText, { color: fontColor }]}>
+					You have no books. Borrow some now to start reading!
+				</Text>
 
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/aira lucero.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/al golondrina.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/delfin viola.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/eileen asuncion.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/emmanuel cacho.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/isaiah misona.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/jestony alvarez.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/john leabres.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/john legaspi.jpg")}
-				/>
-
-				<Image
-					style={styles.img}
-					source={require("../assets/images/college/salvador collado.jpg")}
-				/>
+				<Pressable
+					style={({ pressed }) => [
+						{
+							flexDirection: "row",
+							gap: 10,
+							borderRadius: 16,
+							padding: "5%",
+							alignItems: "center",
+							justifyContent: "center",
+						},
+						{ backgroundColor: pressed ? "#5d9cff" : borderBottom },
+					]}
+				>
+					<Ionicons color={"#fff"} name="add-outline" size={32} />
+					<Text style={{ fontSize: 18, color: "#fff" }}>Borrow a book</Text>
+				</Pressable>
 			</View>
-		</ScrollView>
+		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	mainView: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
 		padding: "5%",
+	},
+
+	dialog: {
+		gap: 60,
+		backgroundColor: "#fff",
+		paddingVertical: "20%",
+		paddingHorizontal: "10%",
+		borderRadius: 16,
+
+		elevation: 16,
+		shadowColor: "#000",
 	},
 
 	bigText: {
@@ -92,9 +68,6 @@ const styles = StyleSheet.create({
 	headline: {
 		marginBottom: 30,
 		fontWeight: "800",
-		paddingBottom: 10,
-		borderBottomColor: "#a1b8ff",
-		borderBottomWidth: 2,
 	},
 
 	img: {

@@ -8,13 +8,14 @@ import {
 import { useFonts } from "expo-font";
 import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 import { useColorScheme } from "@/components/useColorScheme";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
 
 import CustomDrawerContent from "../components/CustomDrawerContent";
+import { DrawerHeaderProps } from "@react-navigation/drawer";
 
 export {
 	// Catch any errors thrown by the Layout component.
@@ -63,18 +64,24 @@ function RootLayoutNav() {
 				<Drawer
 					drawerContent={CustomDrawerContent}
 					screenOptions={{
-						drawerActiveBackgroundColor: "#a1b8ff",
+						headerStyle:
+							colorScheme === "dark"
+								? { backgroundColor: "#1b2d66" }
+								: { backgroundColor: "#a1b8ff" },
+						headerTitleStyle: { color: "#fff" },
+						drawerActiveBackgroundColor:
+							colorScheme === "dark" ? "#1b2d66" : "#a1b8ff",
 						drawerActiveTintColor: "#fff",
 						drawerLabelStyle: { marginLeft: -15 },
-						headerTintColor: colorScheme === "dark" ? "#bababa" : "#000",
+						headerTintColor: "#fff",
 					}}
 					backBehavior="history"
 				>
 					<Drawer.Screen
 						name="index"
 						options={{
-							drawerLabel: "College",
-							headerTitle: "College",
+							drawerLabel: "Home",
+							headerTitle: "Home",
 							drawerIcon: ({ size, color }) => {
 								return (
 									<Ionicons name="home-outline" size={size} color={color} />
@@ -110,13 +117,26 @@ function RootLayoutNav() {
 					></Drawer.Screen>
 
 					<Drawer.Screen
-						name="Map"
+						name="GoogleMap"
 						options={{
 							drawerLabel: "Map",
 							headerTitle: "Map",
 							drawerIcon: ({ size, color }) => {
 								return (
 									<Ionicons name="map-outline" size={size} color={color} />
+								);
+							},
+						}}
+					></Drawer.Screen>
+
+					<Drawer.Screen
+						name="Campus"
+						options={{
+							drawerLabel: "Campus",
+							headerTitle: "Campus",
+							drawerIcon: ({ size, color }) => {
+								return (
+									<Ionicons name="pin-outline" size={size} color={color} />
 								);
 							},
 						}}

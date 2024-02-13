@@ -6,15 +6,28 @@ export default function Map() {
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#bababa" : "#000";
 	const mapItemBgColor = colorScheme === "dark" ? "#2e2e2e" : "#e8e8e8";
+	const borderBottom = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
 
 	return (
 		<ScrollView style={[styles.mainView, { backgroundColor: viewBgColor }]}>
-			<Text style={[styles.biggerText, styles.headline, { color: fontColor }]}>
+			<Text
+				style={[
+					styles.biggerText,
+					styles.headline,
+					{ color: fontColor, borderBottomColor: borderBottom },
+				]}
+			>
 				Campus Map
 			</Text>
 
 			<View
-				style={{ flex: 1, flexDirection: "column", gap: 40, paddingBottom: 40 }}
+				style={{
+					flex: 1,
+					flexDirection: "column",
+					gap: 40,
+					paddingBottom: 40,
+					paddingHorizontal: 10,
+				}}
 			>
 				<View style={[styles.mapItem, { backgroundColor: mapItemBgColor }]}>
 					<Text style={[styles.bigText, { color: fontColor }]}>Layout</Text>
@@ -109,7 +122,6 @@ const styles = StyleSheet.create({
 		marginBottom: 30,
 		fontWeight: "800",
 		paddingBottom: 10,
-		borderBottomColor: "#a1b8ff",
 		borderBottomWidth: 2,
 	},
 
@@ -138,5 +150,8 @@ const styles = StyleSheet.create({
 		gap: 20,
 		padding: 10,
 		borderRadius: 15,
+
+		elevation: 8,
+		shadowColor: "#000",
 	},
 });

@@ -9,8 +9,22 @@ export default function CustomDrawerContent(props: any) {
 	const colorScheme = useColorScheme();
 
 	return (
-		<DrawerContentScrollView style={{ backgroundColor: "#a1b8ff" }} {...props}>
-			<View style={[styles.imgWrapper]}>
+		<DrawerContentScrollView
+			style={
+				colorScheme === "dark"
+					? { backgroundColor: "#1b2d66" }
+					: { backgroundColor: "#a1b8ff" }
+			}
+			{...props}
+		>
+			<View
+				style={[
+					styles.imgWrapper,
+					colorScheme === "dark"
+						? { backgroundColor: "#1b2d66" }
+						: { backgroundColor: "#a1b8ff" },
+				]}
+			>
 				<Image
 					alt="au-logo"
 					style={styles.img}
@@ -33,7 +47,6 @@ const styles = StyleSheet.create({
 	imgWrapper: {
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: "#a1b8ff",
 		marginBottom: 20,
 	},
 
