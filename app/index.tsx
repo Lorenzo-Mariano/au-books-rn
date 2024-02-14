@@ -12,7 +12,7 @@ export default function College() {
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
 	const dialogBgColor = colorScheme === "dark" ? "#2b2b2b" : "#fff";
 	const fontColor = colorScheme === "dark" ? "#fff" : "#000";
-	const borderBottom = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
+	const buttonColor = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
 
 	return (
 		<View style={[styles.mainView, { backgroundColor: viewBgColor }]}>
@@ -31,7 +31,7 @@ export default function College() {
 							alignItems: "center",
 							justifyContent: "center",
 						},
-						{ backgroundColor: pressed ? "#5d9cff" : borderBottom },
+						{ backgroundColor: pressed ? "#5d9cff" : buttonColor },
 					]}
 				>
 					<Ionicons color={"#fff"} name="add-outline" size={32} />

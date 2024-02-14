@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import {
+	Linking,
 	Pressable,
 	StyleSheet,
 	Text,
@@ -9,17 +10,20 @@ import {
 
 export default function SocialMedia() {
 	const colorScheme = useColorScheme();
-	const fontColor = colorScheme === "dark" ? "#fff" : "#000";
+	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
+	const buttonColor = colorScheme === "dark" ? "#4463c6" : "#a1b8ff";
+
+	function openFb() {
+		Linking.openURL("fb://");
+	}
 
 	return (
-		<View style={styles.mainView}>
+		<View style={[styles.mainView, { backgroundColor: viewBgColor }]}>
 			<Pressable
-				onPress={() => {
-					console.log("asdf");
-				}}
+				onPress={openFb}
 				style={({ pressed }) => [
 					styles.button,
-					{ backgroundColor: pressed ? "#5d9cff" : "#a1b8ff" },
+					{ backgroundColor: pressed ? "#5d9cff" : buttonColor },
 				]}
 			>
 				<Ionicons color={"#fff"} name="logo-facebook" size={24}></Ionicons>
