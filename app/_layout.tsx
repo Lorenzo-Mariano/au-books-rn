@@ -257,6 +257,19 @@ function RootLayoutNav() {
 							},
 						}}
 					></Drawer.Screen>
+
+					<Drawer.Screen
+						name="SocialMedia"
+						options={{
+							drawerLabel: "Social Media",
+							headerTitle: "Social Media",
+							drawerIcon: ({ size, color }) => {
+								return (
+									<Ionicons name="people-outline" size={size} color={color} />
+								);
+							},
+						}}
+					></Drawer.Screen>
 				</Drawer>
 			</GestureHandlerRootView>
 		</ThemeProvider>
