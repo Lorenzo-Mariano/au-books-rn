@@ -34,7 +34,7 @@ export default function Contact() {
 
 			<Text style={[styles.bigText, { color: fontColor }]}>Phone:</Text>
 			<Text
-				style={[styles.smallText, { color: fontColor }]}
+				style={[styles.smallText, styles.phoneNumber]}
 				onPress={() => {
 					Linking.openURL("tel:0444643300");
 				}}
@@ -64,6 +64,11 @@ export default function Contact() {
 }
 
 const styles = StyleSheet.create({
+	phoneNumber: {
+		textDecorationLine: "underline",
+		color: "#54afff",
+	},
+
 	mainView: {
 		padding: "5%",
 		height: "100%",
