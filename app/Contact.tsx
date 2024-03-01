@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, View, useColorScheme } from "react-native";
+import {
+	Image,
+	Linking,
+	StyleSheet,
+	Text,
+	View,
+	useColorScheme,
+} from "react-native";
 export default function Contact() {
 	const colorScheme = useColorScheme();
 	const viewBgColor = colorScheme === "dark" ? "#1a1a1a" : "#fff";
@@ -26,7 +33,12 @@ export default function Contact() {
 			</Text>
 
 			<Text style={[styles.bigText, { color: fontColor }]}>Phone:</Text>
-			<Text style={[styles.smallText, { color: fontColor }]}>
+			<Text
+				style={[styles.smallText, { color: fontColor }]}
+				onPress={() => {
+					Linking.openURL("tel:0444643300");
+				}}
+			>
 				(044) 464 3300
 			</Text>
 
