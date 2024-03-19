@@ -89,7 +89,30 @@ function RootLayoutNav() {
 							},
 						}}
 					></Drawer.Screen>
-
+					<Drawer.Screen
+						name="Login"
+						options={{
+							drawerLabel: "Login",
+							headerTitle: "Login",
+							drawerIcon: ({ size, color }) => {
+								return (
+									<Ionicons name="log-in-outline" size={size} color={color} />
+								);
+							},
+						}}
+					></Drawer.Screen>
+					<Drawer.Screen
+						name="Register"
+						options={{
+							drawerLabel: "Register",
+							headerTitle: "Register",
+							drawerIcon: ({ size, color }) => {
+								return (
+									<Ionicons name="log-in-outline" size={size} color={color} />
+								);
+							},
+						}}
+					></Drawer.Screen>
 					<Drawer.Screen
 						name="Services"
 						options={{

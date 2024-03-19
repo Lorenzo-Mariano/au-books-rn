@@ -34,8 +34,7 @@ export default function FAQ() {
 					<Text
 						style={[styles.bigText, { marginBottom: 20, color: fontColor }]}
 					>
-						Q: What programs does the College of Information Technology and
-						Engineering offer?
+						Q: What programs does the College Technology and Engineering offer?
 					</Text>
 					<Text style={[styles.normalText, { color: fontColor }]}>
 						A: The college offers a range of programs, including Bachelor's

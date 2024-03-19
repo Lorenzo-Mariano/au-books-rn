@@ -66,8 +66,8 @@ export default function PhinmaEducation() {
 					Presently, we offer 110+ programs covering the entire education chain.
 					We invest heavily in its teachers who deliver lessons using the Active
 					Learning method. This is supplemented by the Student Success Program
-					(SSP), which emphasizes the three mindsets of “I want, I can, and I
-					belong.” We work with industry partners to ensure the curriculum is
+					(SSP), which emphasizes the three mindsets of 'I want, I can, and I
+					belong.' We work with industry partners to ensure the curriculum is
 					relevant while teaching Core Work Skills that are necessary in every
 					industry.
 				</Text>
